@@ -17,7 +17,6 @@ public class GameTest {
 
     @Test
     public void testValidMove() {
-        Game game = new Game(3);
         try {
             boolean result;
 
@@ -37,7 +36,6 @@ public class GameTest {
 
     @Test
     public void testInvalidMove() {
-        Game game = new Game(3);
         assertThrows(InvalidMoveException.class, () -> {
             game.move(1, 0, 0); // First move
             game.move(2, 0, 0); // Invalid move, should throw exception
